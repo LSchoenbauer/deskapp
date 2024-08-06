@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="452.0" prefWidth="611.0" spacing="40.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.invoiceclientapp.controller.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <VBox prefHeight="516.0" prefWidth="571.0" spacing="20.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="43.0" prefWidth="571.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="43.0" prefWidth="322.0" text="BMD - Invoice Software">
+                     <font>
+                        <Font name="Bauhaus 93" size="27.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox prefHeight="308.0" prefWidth="571.0" spacing="50.0">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="308.0" prefWidth="312.0" spacing="35.0">
+                     <children>
+                        <ListView fx:id="lvInvoiceCollection" prefHeight="203.0" prefWidth="274.0" />
+                        <Button fx:id="btnRefreshInvoiceList" mnemonicParsing="false" onAction="#refreshInvoiceList" prefHeight="42.0" prefWidth="124.0" text="Refresh Inbox" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="308.0" prefWidth="286.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="286.0" spacing="20.0">
+                           <children>
+                              <Label text="Recipient ID:" />
+                              <TextField fx:id="lblRecipientId" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="286.0" spacing="20.0">
+                           <children>
+                              <Label text="Date:" />
+                              <TextField fx:id="lblDate" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="55.0" prefWidth="286.0" spacing="20.0">
+                           <children>
+                              <Label text="Description:" />
+                              <TextField fx:id="lblDescription" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="53.0" prefWidth="351.0" spacing="20.0">
+                           <children>
+                              <Label text="Amount:" />
+                              <TextField fx:id="lblAmount" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="98.0" prefWidth="206.0">
+                           <children>
+                              <Button fx:id="btnCreateInvoice" mnemonicParsing="false" onAction="#createInvoice" prefHeight="42.0" prefWidth="124.0" text="Create new Invoice" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>
